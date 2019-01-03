@@ -1,0 +1,7 @@
+<mat-nav-list>
+  <mat-list-item *ngFor="let task of tasks; index as i">
+    <tiny-task-list-item [task]="task" (toggleDone)="onToggleTaskDone($event)" (remove)="onRemoveTask($event)"
+      (taskChange)="onUpdate($event)">
+    </tiny-task-list-item>
+  </mat-list-item>
+</mat-nav-list>

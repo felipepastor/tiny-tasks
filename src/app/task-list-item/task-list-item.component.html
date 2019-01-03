@@ -1,0 +1,14 @@
+<div class="itemContainer">
+  <input *ngIf="!task.done else completeBlock" matInput #task{{task.id}} [(ngModel)]="task.title" (change)="onUpdate(task)" />
+  <ng-template #completeBlock>
+    <span class="doneLabel">
+      {{task.title}}
+    </span>
+  </ng-template>
+  <button mat-icon-button>
+    <mat-icon aria-label="Delete task" (click)="onRemoveTask(task)">delete</mat-icon>
+  </button>
+  <button mat-icon-button>
+    <mat-icon aria-label="Mark as done" [class.done]="task.done" (click)="onToggleTaskDone(task)">check</mat-icon>
+  </button>
+</div>

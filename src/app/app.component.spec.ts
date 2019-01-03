@@ -1,19 +1,30 @@
 import { TestBed, async } from '@angular/core/testing';
-import { MatButtonModule, MatInputModule, MatIconModule } from '@angular/material';
+import { MatButtonModule, MatInputModule, MatIconModule, MatListModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
+import { TaskListComponent } from './task-list/task-list.component';
+import { TaskListItemComponent } from './task-list-item/task-list-item.component';
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('AppComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        TaskListComponent,
+        TaskListItemComponent
       ],
       imports: [
+        FormsModule,
+        BrowserModule,
+        BrowserAnimationsModule,
         MatButtonModule,
         MatInputModule,
-        MatIconModule
+        MatIconModule,
+        MatListModule,
       ],
     }).compileComponents();
   }));

@@ -1,0 +1,23 @@
+.container {
+  max-width: 768px;
+  margin: auto;
+  h1 {
+    text-align: center;
+  }
+}
+
+.mat-list-item-content {
+  width: 100%;
+}
+
+.containerAction {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.listContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
